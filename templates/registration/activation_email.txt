@@ -1,0 +1,7 @@
+<p>
+	Para activar su cuenta debe ingresar a la siguiente url:
+</p>
+
+<p>
+	{{ activation_key }}
+</p>
