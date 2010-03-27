@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>Principal</title>
+	</head>
+	<body>
+		<h1> Categorias </h1>
+		{% for categoria in categorias %}
+			
+			
+			{% ifequal categoria.cat_padre_id 0 %}
+				
+				{% if categoria.hijos.count %}
+					<h2>{{ categoria.titulo }}</h2>
+					<ul>
+					{% for hijo in categoria.hijos.all %}
+						<li>{{ hijo }}</li>
+					{% endfor %}
+					</ul>
+				{% else %}
+					<h2>{{ categoria.titulo }}</h2>
+				{% endif %}
+
+			{% endifequal %}
+		{% endfor %}
+	</body>
+</html>

@@ -83,8 +83,10 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.admin',
     'django.contrib.flatpages',
+    'aofertar',
+    'categorias',
     'registration',
-    'categorias'
+    
 )
 
 ACCOUNT_ACTIVATION_DAYS = 7

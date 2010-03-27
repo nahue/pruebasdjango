@@ -17,5 +17,7 @@ urlpatterns = patterns('',
     (r'^admin/', include(admin.site.urls)),
     (r'^tiny_mce/(?P<path>.*)$','django.views.static.serve',
     	{'document_root': settings.MEDIA_ROOT + "/tiny_mce" }),
+    (r'', include('aofertar.urls')),
+    #(r'principal', 'aofertar.views.principal'),
     (r'', include('django.contrib.flatpages.urls')),
 )

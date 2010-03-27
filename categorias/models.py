@@ -8,7 +8,7 @@ from django.contrib import admin
 class Categoria(models.Model):
     titulo = models.CharField(max_length=250)
     descripcion = models.TextField(blank=True)
-    cat_padre = models.ForeignKey('self', blank=True, null=True, related_name='hijo')
+    cat_padre = models.ForeignKey('self', blank=True, null=True, related_name='hijos')
     def __unicode__(self):
         return self.titulo
     
